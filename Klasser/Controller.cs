@@ -32,11 +32,11 @@ namespace experiment.Klasser
             string? bloodStatus = Console.ReadLine().ToLower();
             ControllerModel.BloodStatus = bloodStatus;
  
-            while(bloodStatus != "pureblood" && bloodStatus != "halfblood" && bloodStatus != "muglleborn")
+            while(bloodStatus != "pureblood" && bloodStatus != "halfblood" && bloodStatus != "muggleborn")
             {
                 Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn.");
 
-                bloodStatus = Console.ReadLine();
+                bloodStatus = Console.ReadLine().ToLower();
 
              if(bloodStatus == "pureblood" | bloodStatus == "halfblood" | bloodStatus == "muggleborn")
             break;
@@ -125,36 +125,36 @@ namespace experiment.Klasser
 
             switch (weakness)
             {
-                case "Charms":
+                case "charms":
                     Console.WriteLine("Pretty sure you need that for combat\n");
                     break;
 
-                case "Curses":
+                case "curses":
                     Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
                     break;
 
-                case "Transfiguration":
+                case "transfiguration":
                     Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
                     break;
 
-                case "healing-magic":
+                case "healing":
                     Console.WriteLine("You dont need to heal if everyone around you dies first\n");
                     break;
 
-                case "Jinxes":
+                case "jinxes":
                     Console.WriteLine("pretty sure some of thsoe are lethal\n");
                     break;
 
-                case "Hexes":
+                case "hexes":
                     Console.WriteLine("be better\n");
                     break;
 
-                case "Counter-Spells":
+                case "counter-Spells":
                     Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
                     break;
                 
                 default:
-                Console.WriteLine(@"Type out an actual subject you muggle remember it's case sensetive! the subjects are
+                Console.WriteLine(@"Type out an actual subject you muggle the subjects are
                 Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
                 breakFlag = false;
                 break; 
@@ -167,10 +167,27 @@ namespace experiment.Klasser
         {
             if (int.TryParse(Console.ReadLine(), out int powerLevel))
             {
+                if(powerLevel >=)
                 ControllerModel.PowerLevel = powerLevel;
+            
+              else
+              {
+                while(powerLevel != 1 && powerLevel != 2 && powerLevel != 3 && powerLevel != 4 && powerLevel != 5 && powerLevel != 6 && powerLevel != 7)
+                {
+                   Console.WriteLine("Invalid input please type a number between 1 and 7");
+                   if(int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel == 1 & powerLevel == 2 & powerLevel == 3 & powerLevel == 4 & powerLevel == 5 & powerLevel == 6 & powerLevel == 7) 
+                    {
+                    ControllerModel.PowerLevel = powerLevel;
+                    break;
+
+                   }
+                }
+             
+               }
             }
 
         }
+
 
         public void Houses()
         {
