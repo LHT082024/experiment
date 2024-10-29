@@ -1,0 +1,2 @@
+need to add bax "wizard"
+need to make it so that the user have to click a button before they get the next userinput prompt so they can read the comments easily
