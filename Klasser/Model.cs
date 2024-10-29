@@ -25,9 +25,5 @@ namespace experiment.Klasser
 
 
 
-    // public override string ToString()
-    //     {
-    //         return $"Your name is: {Name}\n Your BloodStatus: {BloodStatus}\n Your Speciality: {Speciality}\n Your Powerlever: {PowerLevel}\n And your House is: {House}";
 
-    //     }
 }

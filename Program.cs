@@ -29,7 +29,7 @@ class Program
         Console.WriteLine(view.GetMessage6());
         controller.Houses();
 
-        Console.WriteLine(view.GetMessage7());
+        controller.FinalList();
 
         Console.WriteLine(view.GetMessage8());
 

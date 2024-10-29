@@ -154,6 +154,11 @@ namespace experiment.Klasser
             }
         }
 
+        public void FinalList()
+        {
+            Console.WriteLine($"Your name: {GiveName}\n Your bloodstatus: {BloodStatus}\n You excel at:{Speciality}\n You are terrible at{Weakness}\n Your powerlevel is{PowerLevel}\n Your house is{Houses}");
+        }
+
 
 
 

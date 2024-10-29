@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace experiment.Klasser
 {
+
     public class View
     {
-        Controller viewControll;
         //questions asked by the console
         string Message1 = @"Welcome to Hogwarts here you will either learn magic or die
 the possiblites are endless :) now lets start with your name";
@@ -44,11 +44,6 @@ the possiblites are endless :) now lets start with your name";
         {
             return Message6;
         }
-        public string GetMessage7()
-        {
-            return $"Your name: {viewControll.GiveName}\n Your bloodstatus: {viewControll.BloodStatus}\n you excel at: {viewControll.Speciality}\n you are terrible at: {viewControll.Weakness}\n your powerlevel is: {viewControll.PowerLevel}\n and your house is: {viewControll.Houses}";
-        }
-
 
         public string GetMessage8()
         {
