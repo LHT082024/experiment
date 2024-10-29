@@ -31,6 +31,8 @@ class Program
 
         Console.WriteLine(view.GetMessage7());
 
+        Console.WriteLine(view.GetMessage8());
+
 
     }
 }

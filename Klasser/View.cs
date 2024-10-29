@@ -8,7 +8,7 @@ namespace experiment.Klasser
 {
     public class View
     {
-        Controller viewController;
+        Controller viewControll;
         //questions asked by the console
         string Message1 = @"Welcome to Hogwarts here you will either learn magic or die
 the possiblites are endless :) now lets start with your name";
@@ -16,8 +16,8 @@ the possiblites are endless :) now lets start with your name";
         string Message3 = "\nWhat magic do you excel at pick one of the following\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells\n";
         string Message4 = "\nNow remember no one is perfcet tell me what are you terrible at\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells\n";
         string Message5 = "\nHow powerful of a sorcerer are you pick between 1-10\n";
-        string Message6 = "\nFinally we are at your last choice, Your house. Which house do you belong to?\n Slythering, Gryffindor, Hufflepuff, Ravenclaw\n";
-        string Message7 = $"\nCongratulations you are now an offical student at Hogwarts, your character sheet can be found in the newly created txt file\n";
+        string Message6 = "\nFinally we are at your last choice, Your house. Which house do you belong to?\n Slytherin, Gryffindor, Hufflepuff, Ravenclaw\n";
+        string Message8 = $"\nCongratulations you are now an offical student at Hogwarts, your character sheet can be found in the newly created txt file\n";
 
 
         public string GetMessage1()
@@ -46,12 +46,13 @@ the possiblites are endless :) now lets start with your name";
         }
         public string GetMessage7()
         {
-            return Message7;
+            return $"Your name: {viewControll.GiveName}\n Your bloodstatus: {viewControll.BloodStatus}\n you excel at: {viewControll.Speciality}\n you are terrible at: {viewControll.Weakness}\n your powerlevel is: {viewControll.PowerLevel}\n and your house is: {viewControll.Houses}";
         }
+
 
         public string GetMessage8()
         {
-            return $"Your name: {viewController.GiveName}\n Your bloodstatus: {viewController.BloodStatus}\n you excel at: {viewController.Speciality}\n you are terrible at: {viewController.Weakness}\n your powerlevel is: {viewController.PowerLevel}\n and your house is: {viewController.Houses}";
+            return Message8;
         }
 
     }
