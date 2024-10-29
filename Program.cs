@@ -12,7 +12,7 @@ class Program
         Controller controller = new Controller(model, view);
 
         Console.WriteLine(view.GetMessage1());
-        Console.WriteLine(controller.giveName);
+        controller.giveName();
 
     }
 }
