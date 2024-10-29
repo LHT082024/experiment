@@ -15,6 +15,8 @@ namespace experiment.Klasser
             ControllerView = view;
         }
 
+        //the first method GivenName makes the string newName and gives it the value of the userinput then it assaigns the Name varible 
+        //and assign it the value of the newName variable
         public void GiveName()
         {
             string? newName = Console.ReadLine();
@@ -22,11 +24,23 @@ namespace experiment.Klasser
 
         }
 
+        //the BloodStatus method does the same thing that GivenName does with the Bloodstatus varible from model. It also adds a while loop to make sure
+        //that the user actually inputs one of the correct bloodstatuses #pureblood for the winnnnnnnn
         public void BloodStatus()
         {
 
             string? bloodStatus = Console.ReadLine();
             ControllerModel.BloodStatus = bloodStatus;
+ 
+            while(bloodStatus != "Pureblood" | bloodStatus != "Halfblood" | bloodStatus != "Muglleborn")
+            {
+                Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn. Remember it is case sensetive");
+
+                bloodStatus = Console.ReadLine();
+
+                if(bloodStatus == "Pureblood" | bloodStatus == "Halfblood" | bloodStatus == "Muglleborn")
+                break;
+            }
 
             if (bloodStatus == "Pureblood")
             {
