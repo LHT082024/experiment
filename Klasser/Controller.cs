@@ -25,7 +25,21 @@ namespace experiment.Klasser
         public void bloodStatus()
         {
 
-            string? bloodStatus
+            string? bloodStatus = Console.ReadLine();
+
+            if (bloodStatus == "Pureblood")
+            {
+                Console.WriteLine("A proper Wizard then not one of those filthy mudbloods");
+            }
+            else if (bloodStatus == "Halfblood")
+            {
+                Console.WriteLine("Like, thats okay.. like you are a wizard, but like, punch your mother or something will you?");
+
+            }
+            else if (bloodStatus == "Muggleborn")
+            {
+                Console.WriteLine("Okay.. okay... like... sure...");
+            }
 
         }
 
