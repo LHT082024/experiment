@@ -32,14 +32,14 @@ namespace experiment.Klasser
             string? bloodStatus = Console.ReadLine();
             ControllerModel.BloodStatus = bloodStatus;
  
-            while(bloodStatus != "Pureblood" | bloodStatus != "Halfblood" | bloodStatus != "Muglleborn")
+            while(bloodStatus != "Pureblood" && bloodStatus != "Halfblood" && bloodStatus != "Muglleborn")
             {
                 Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn. Remember it is case sensetive");
 
                 bloodStatus = Console.ReadLine();
 
-                if(bloodStatus == "Pureblood" | bloodStatus == "Halfblood" | bloodStatus == "Muglleborn")
-                break;
+             if(bloodStatus == "Pureblood" | bloodStatus == "Halfblood" | bloodStatus == "Muggleborn")
+            break;
             }
 
             if (bloodStatus == "Pureblood")
@@ -59,8 +59,14 @@ namespace experiment.Klasser
 
         public void Speciality()
         {
-            string? speciality = Console.ReadLine();
+            bool breakFlag = false; 
+
+            while(!breakFlag)
+            {
+             string? speciality = Console.ReadLine();
             ControllerModel.Speciality = speciality;
+            
+             breakFlag = true;
 
             switch (speciality)
             {
@@ -77,7 +83,7 @@ namespace experiment.Klasser
                     Console.WriteLine("Booooring\n");
                     break;
 
-                case "Healing": case "healing-magic":
+                case "Healing": 
                     Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
                     break;
 
@@ -93,7 +99,17 @@ namespace experiment.Klasser
                     Console.WriteLine("I dont think those are lethal :()");
                     break;
 
+                default:
+                Console.WriteLine(@"Type out an actual subject you muggle remember it's case sensetive! the subjects are
+                Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
+                breakFlag = false;
+                break; 
+
             }
+
+            }
+
+           
         }
 
         public void Weakness()
