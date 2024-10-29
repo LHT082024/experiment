@@ -10,6 +10,7 @@ class Program
         Controller controller = new Controller();
         View view = new View();
 
+        Console.WriteLine(view.GetMessage1());
 
     }
 }
