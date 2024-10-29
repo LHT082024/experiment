@@ -1,0 +1,5 @@
+Name: Alice
+Bloodstatus: Pureblood
+best at: Curses
+Worst at: healing-magic
+Powerlever: Slytherin

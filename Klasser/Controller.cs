@@ -163,7 +163,6 @@ namespace experiment.Klasser
       {
         string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
          string filePath = $"Character_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
-           File.Create(filePath);
            File.WriteAllText(filePath, completedCharacter);
       }
 
