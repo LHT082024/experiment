@@ -29,16 +29,16 @@ namespace experiment.Klasser
         public void BloodStatus()
         {
 
-            string? bloodStatus = Console.ReadLine();
+            string? bloodStatus = Console.ReadLine().ToLower();
             ControllerModel.BloodStatus = bloodStatus;
  
-            while(bloodStatus != "Pureblood" && bloodStatus != "Halfblood" && bloodStatus != "Muglleborn")
+            while(bloodStatus != "pureblood" && bloodStatus != "halfblood" && bloodStatus != "muglleborn")
             {
-                Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn. Remember it is case sensetive");
+                Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn.");
 
                 bloodStatus = Console.ReadLine();
 
-             if(bloodStatus == "Pureblood" | bloodStatus == "Halfblood" | bloodStatus == "Muggleborn")
+             if(bloodStatus == "pureblood" | bloodStatus == "halfblood" | bloodStatus == "muggleborn")
             break;
             }
 
@@ -63,7 +63,7 @@ namespace experiment.Klasser
 
             while(!breakFlag)
             {
-             string? speciality = Console.ReadLine();
+             string? speciality = Console.ReadLine().ToLower();
             ControllerModel.Speciality = speciality;
             
              breakFlag = true;
@@ -71,36 +71,36 @@ namespace experiment.Klasser
             switch (speciality)
             {
                 
-                case "Charms":
+                case "charms":
                     Console.WriteLine("cool\n");
                     break;
 
-                case "Curses":
+                case "curses":
                     Console.WriteLine("there we go a sorcerer after my own heart curse those Mud- those dark wizards\n");
                     break;
 
-                case "Transfiguration":
+                case "transfiguration":
                     Console.WriteLine("Booooring\n");
                     break;
 
-                case "Healing": 
+                case "healing": 
                     Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
                     break;
 
-                case "Jinxes":
+                case "jinxes":
                     Console.WriteLine("that works :)\n");
                     break;
 
-                case "Hexes":
+                case "hexes":
                     Console.WriteLine("yes offence is the best defence\n");
                     break;
 
-                case "Counter-Spells":
+                case "counter-Spells":
                     Console.WriteLine("I dont think those are lethal :()");
                     break;
 
                 default:
-                Console.WriteLine(@"Type out an actual subject you muggle remember it's case sensetive! the subjects are
+                Console.WriteLine(@"Type out an actual subject you muggle the subjects are
                 Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
                 breakFlag = false;
                 break; 
@@ -114,8 +114,14 @@ namespace experiment.Klasser
 
         public void Weakness()
         {
-            string? weakness = Console.ReadLine();
+             bool breakFlag = false; 
+
+            while(!breakFlag)
+            {
+             string? weakness = Console.ReadLine().ToLower();
             ControllerModel.Weakness = weakness;
+           
+             breakFlag = true;
 
             switch (weakness)
             {
@@ -146,9 +152,16 @@ namespace experiment.Klasser
                 case "Counter-Spells":
                     Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
                     break;
-                    //  case weakness !=
+                
+                default:
+                Console.WriteLine(@"Type out an actual subject you muggle remember it's case sensetive! the subjects are
+                Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
+                breakFlag = false;
+                break; 
+                    
             }
-        }
+         }
+     }
 
         public void PowerLevel()
         {
