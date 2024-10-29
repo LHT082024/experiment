@@ -18,14 +18,15 @@ class Program
         controller.BloodStatus();
 
         Console.WriteLine(view.GetMessage3());
+        controller.Speciality();
 
-        Console.WriteLine(view.GetMessage4());
+        // Console.WriteLine(view.GetMessage4());
 
-        Console.WriteLine(view.GetMessage5());
+        // Console.WriteLine(view.GetMessage5());
 
-        Console.WriteLine(view.GetMessage6());
+        // Console.WriteLine(view.GetMessage6());
 
-        Console.WriteLine(view.GetMessage7());
+        // Console.WriteLine(view.GetMessage7());
 
     }
 }
