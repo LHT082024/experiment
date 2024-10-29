@@ -15,14 +15,14 @@ namespace experiment.Klasser
             ControllerView = view;
         }
 
-        public void giveName()
+        public void GiveName()
         {
             string? newName = Console.ReadLine();
             Console.WriteLine($"Your name is {newName}");
 
         }
 
-        public void bloodStatus()
+        public void BloodStatus()
         {
 
             string? bloodStatus = Console.ReadLine();

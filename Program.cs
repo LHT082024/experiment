@@ -12,9 +12,10 @@ class Program
         Controller controller = new Controller(model, view);
 
         Console.WriteLine(view.GetMessage1());
-        controller.giveName();
+        controller.GiveName();
 
         Console.WriteLine(view.GetMessage2());
+        controller.BloodStatus();
 
         Console.WriteLine(view.GetMessage3());
 
