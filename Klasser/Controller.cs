@@ -19,7 +19,6 @@ namespace experiment.Klasser
         {
             string? newName = Console.ReadLine();
             ControllerModel.Name = newName;
-            Console.WriteLine($"Your name is {newName}");
 
         }
 
