@@ -7,6 +7,9 @@ namespace experiment.Klasser
 {
     public class Controller
     {
-        
+        Model model = new Model();
+
+
+
     }
 }
