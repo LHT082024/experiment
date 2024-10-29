@@ -23,6 +23,30 @@ the possiblites are endless :) now lets start with your name";
         {
             return Message1;
         }
+        public string GetMessage2()
+        {
+            return Message2;
+        }
+        public string GetMessage3()
+        {
+            return Message3;
+        }
+        public string GetMessage4()
+        {
+            return Message4;
+        }
+        public string GetMessage5()
+        {
+            return Message5;
+        }
+        public string GetMessage6()
+        {
+            return Message6;
+        }
+        public string GetMessage7()
+        {
+            return Message7;
+        }
 
     }
 }
