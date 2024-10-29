@@ -8,6 +8,7 @@ namespace experiment.Klasser
 {
     public class View
     {
+        Controller viewController;
         //questions asked by the console
         string Message1 = @"Welcome to Hogwarts here you will either learn magic or die
 the possiblites are endless :) now lets start with your name";
@@ -46,6 +47,11 @@ the possiblites are endless :) now lets start with your name";
         public string GetMessage7()
         {
             return Message7;
+        }
+
+        public string GetMessage8()
+        {
+            return $"Your name: {viewController.GiveName}\n Your bloodstatus: {viewController.BloodStatus}\n you excel at: {viewController.Speciality}\n you are terrible at: {viewController.Weakness}\n your powerlevel is: {viewController.PowerLevel}\n and your house is: {viewController.Houses}";
         }
 
     }

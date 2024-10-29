@@ -116,14 +116,43 @@ namespace experiment.Klasser
                 case "Counter-Spells":
                     Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
                     break;
-
+                    //  case weakness !=
             }
         }
 
-        // public void PowerLevel()
-        // {
-        //     int powerlevel = Console.ReadLine();
-        // }
+        public void PowerLevel()
+        {
+            if (int.TryParse(Console.ReadLine(), out int powerLevel))
+            {
+                ControllerModel.PowerLevel = powerLevel;
+            }
+
+        }
+
+        public void Houses()
+        {
+            string? houses = Console.ReadLine();
+            ControllerModel.House = houses;
+
+            switch (houses)
+            {
+                case "Slytherin":
+                    Console.WriteLine("The best house parseltongue is bae <3");
+                    break;
+
+                case "Gryffindor":
+                    Console.WriteLine("ewww you basic jock please stay away from me");
+                    break;
+
+                case "Hufflepuff":
+                    Console.WriteLine("thats cute");
+                    break;
+
+                case "Ravenclaw":
+                    Console.WriteLine("ha nerd");
+                    break;
+            }
+        }
 
 
 

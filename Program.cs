@@ -23,11 +23,14 @@ class Program
         Console.WriteLine(view.GetMessage4());
         controller.Weakness();
 
-        // Console.WriteLine(view.GetMessage5());
+        Console.WriteLine(view.GetMessage5());
+        controller.PowerLevel();
 
-        // Console.WriteLine(view.GetMessage6());
+        Console.WriteLine(view.GetMessage6());
+        controller.Houses();
 
-        // Console.WriteLine(view.GetMessage7());
+        Console.WriteLine(view.GetMessage7());
+
 
     }
 }
