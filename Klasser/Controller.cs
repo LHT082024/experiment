@@ -167,23 +167,25 @@ namespace experiment.Klasser
         {
             if (int.TryParse(Console.ReadLine(), out int powerLevel))
             {
-                if(powerLevel >=)
-                ControllerModel.PowerLevel = powerLevel;
-            
-              else
-              {
-                while(powerLevel != 1 && powerLevel != 2 && powerLevel != 3 && powerLevel != 4 && powerLevel != 5 && powerLevel != 6 && powerLevel != 7)
+                if(powerLevel >= 1 && powerLevel <= 7)
                 {
-                   Console.WriteLine("Invalid input please type a number between 1 and 7");
-                   if(int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel == 1 & powerLevel == 2 & powerLevel == 3 & powerLevel == 4 & powerLevel == 5 & powerLevel == 6 & powerLevel == 7) 
-                    {
-                    ControllerModel.PowerLevel = powerLevel;
-                    break;
-
-                   }
+                    ControllerModel.PowerLevel = powerLevel;      
                 }
+            
+                else
+                {
+                    while(powerLevel < 1 || powerLevel > 7)
+                    {
+                        Console.WriteLine("Invalid input please type a number between 1 and 7");
+                        if(int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel >= 1 && powerLevel <= 7) 
+                            {
+                               ControllerModel.PowerLevel = powerLevel;
+                              break;
+
+                            }
+                     }
              
-               }
+                 }
             }
 
         }
