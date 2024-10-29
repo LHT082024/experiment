@@ -50,6 +50,7 @@ namespace experiment.Klasser
 
             switch (speciality)
             {
+                
                 case "Charms":
                     Console.WriteLine("cool\n");
                     break;
@@ -62,7 +63,7 @@ namespace experiment.Klasser
                     Console.WriteLine("Booooring\n");
                     break;
 
-                case "Healing":
+                case "Healing": case "healing-magic":
                     Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
                     break;
 
@@ -162,13 +163,9 @@ namespace experiment.Klasser
       public void Filegenerating() 
       {
         string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
-         string filePath = $"Character_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+         string filePath = $"Character{ControllerModel.Name}.txt";
+        //  _{DateTime.Now:yyyyMMdd_HHmmss}.txt";
            File.WriteAllText(filePath, completedCharacter);
       }
-
-
-
-
-
     }
 }
