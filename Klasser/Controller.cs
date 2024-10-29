@@ -22,6 +22,13 @@ namespace experiment.Klasser
 
         }
 
+        public void bloodStatus()
+        {
+
+            string? bloodStatus
+
+        }
+
 
 
     }

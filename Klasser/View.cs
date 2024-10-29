@@ -8,8 +8,16 @@ namespace experiment.Klasser
 {
     public class View
     {
+        //questions asked by the console
         string Message1 = @"Welcome to Hogwarts here you will either learn magic or die
-            the possiblites are endless :) now lets start with your name";
+the possiblites are endless :) now lets start with your name";
+        string Message2 = "and what is your bloodstatus? pick one of the following\nPureblood, Halfblood, Muggleborn";
+        string Message3 = "What magic do you excel at pick one of the following\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells";
+        string Message4 = "Now remember no one is perfcet tell me what are you terrible at\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells";
+        string Message5 = "How powerful of a sorcerer are you pick between 1-10";
+        string Message6 = "Finally we are at your last choice, Your house. Which house do you belong to?\n Slythering, Gryffindor, Hufflepuff, Ravenclaw";
+        string Message7 = $"Congratulations you are now an offical student at Hogwarts, your character sheet can be found in the newly created txt file";
+
 
         public string GetMessage1()
         {
