@@ -57,6 +57,10 @@ namespace experiment.Klasser
             }
         }
 
+
+        //Speciality method has a boolean set to false. When the user have typed something into the console the breakflag bool is set to true. 
+        //it then loops through the switch statment seeing if user input matches any of the cases. If user input dosent match any of the cases
+        //it uses the default cause making the bool false again and asking the user to try again and type something matching the other cases
         public void Speciality()
         {
             bool breakFlag = false; 
@@ -112,6 +116,7 @@ namespace experiment.Klasser
            
         }
 
+         //same method as Specailty just the names changed
         public void Weakness()
         {
              bool breakFlag = false; 
@@ -163,6 +168,10 @@ namespace experiment.Klasser
          }
      }
 
+
+        //The powerlevel method. The Powerlevel variable in model is set to int. So I have to use parsing to convert user input to int. 
+        //The if statment checks if the user types a valid number (between 1-7) if the user did so the Powerlevel variable from model is assigned the value of powerlevel and we continue. 
+        //if the user dosent type a valid number we go to an else statment that has a while that tells the user to type a proper number and will keep asking until the user does so
         public void PowerLevel()
         {
             if (int.TryParse(Console.ReadLine(), out int powerLevel))
@@ -191,37 +200,54 @@ namespace experiment.Klasser
         }
 
 
+        //Same deal as the two other switchcases in the controller
         public void Houses()
         {
-            string? houses = Console.ReadLine();
-            ControllerModel.House = houses;
+                bool breakFlag = false; 
 
-            switch (houses)
+            while(!breakFlag)
             {
-                case "Slytherin":
-                    Console.WriteLine("The best house parseltongue is bae <3");
-                    break;
+                string? houses = Console.ReadLine().ToLower();
+                ControllerModel.House = houses;
+            
+                breakFlag = true;
 
-                case "Gryffindor":
-                    Console.WriteLine("ewww you basic jock please stay away from me");
-                    break;
+                switch (houses)
+                {
+                    case "slytherin":
+                        Console.WriteLine("The best house parseltongue is bae <3");
+                        break;
 
-                case "Hufflepuff":
-                    Console.WriteLine("thats cute");
-                    break;
+                    case "gryffindor":
+                        Console.WriteLine("ewww you basic jock please stay away from me");
+                        break;
 
-                case "Ravenclaw":
-                    Console.WriteLine("ha nerd");
+                    case "hufflepuff":
+                        Console.WriteLine("thats cute");
+                        break;
+
+                    case "ravenclaw":
+                        Console.WriteLine("ha nerd");
+                        break;
+
+                    default:
+                    Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
+                    breakFlag = false;
                     break;
+            
+                } 
             }
         }
 
+        //prints out a final list for the user.
         public void FinalList()
         {
             // return $"Your name: {GiveName}\n Your bloodstatus: {BloodStatus}\n You excel at:{Speciality}\n You are terrible at{Weakness}\n Your powerlevel is{PowerLevel}\n Your house is{Houses}";
             Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
         }
 
+
+      //generates a text file saving the character data of the user called Character(whatever the user called their character)
       public void Filegenerating() 
       {
         string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
