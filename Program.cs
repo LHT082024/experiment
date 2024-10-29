@@ -20,7 +20,8 @@ class Program
         Console.WriteLine(view.GetMessage3());
         controller.Speciality();
 
-        // Console.WriteLine(view.GetMessage4());
+        Console.WriteLine(view.GetMessage4());
+        controller.Weakness();
 
         // Console.WriteLine(view.GetMessage5());
 

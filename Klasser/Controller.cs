@@ -18,6 +18,7 @@ namespace experiment.Klasser
         public void GiveName()
         {
             string? newName = Console.ReadLine();
+            ControllerModel.Name = newName;
             Console.WriteLine($"Your name is {newName}");
 
         }
@@ -26,6 +27,7 @@ namespace experiment.Klasser
         {
 
             string? bloodStatus = Console.ReadLine();
+            ControllerModel.BloodStatus = bloodStatus;
 
             if (bloodStatus == "Pureblood")
             {
@@ -45,6 +47,7 @@ namespace experiment.Klasser
         public void Speciality()
         {
             string? speciality = Console.ReadLine();
+            ControllerModel.Speciality = speciality;
 
             switch (speciality)
             {
@@ -78,6 +81,52 @@ namespace experiment.Klasser
 
             }
         }
+
+        public void Weakness()
+        {
+            string? weakness = Console.ReadLine();
+            ControllerModel.Weakness = weakness;
+
+            switch (weakness)
+            {
+                case "Charms":
+                    Console.WriteLine("Pretty sure you need that for combat\n");
+                    break;
+
+                case "Curses":
+                    Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
+                    break;
+
+                case "Transfiguration":
+                    Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
+                    break;
+
+                case "healing-magic":
+                    Console.WriteLine("You dont need to heal if everyone around you dies first\n");
+                    break;
+
+                case "Jinxes":
+                    Console.WriteLine("pretty sure some of thsoe are lethal\n");
+                    break;
+
+                case "Hexes":
+                    Console.WriteLine("be better\n");
+                    break;
+
+                case "Counter-Spells":
+                    Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
+                    break;
+
+            }
+        }
+
+        // public void PowerLevel()
+        // {
+        //     int powerlevel = Console.ReadLine();
+        // }
+
+
+
 
 
 
