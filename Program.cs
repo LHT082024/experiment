@@ -33,6 +33,8 @@ class Program
 
         Console.WriteLine(view.GetMessage8());
 
+        controller.Filegenerating();
+
 
 
 

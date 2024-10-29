@@ -159,6 +159,16 @@ namespace experiment.Klasser
             Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
         }
 
+      public void Filegenerating() 
+      {
+        string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
+         string filePath = "Character.txt";
+         File.WriteAllText(filePath, completedCharacter);
+         
+        //  using (File.Create(filePath));
+         
+
+      }
 
 
 
