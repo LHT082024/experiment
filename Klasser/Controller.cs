@@ -55,7 +55,7 @@ namespace experiment.Klasser
         //that the user actually inputs one of the correct bloodstatuses #pureblood for the winnnnnnnn
         public void BloodStatus()
         {
-            if (ControllerModel.Name == "bax")
+            if (ControllerModel.Name == "bax" || ControllerModel.Name == "sigrid")
             {
                 ControllerModel.BloodStatus = "Pureblood";
             }
