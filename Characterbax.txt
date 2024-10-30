@@ -1,6 +1,0 @@
-Name: bax
-Bloodstatus: Pureblood
-best at: Curses
-Worst at: forgetting to sleep
-Powerlevel: 10
-Your house: Gryffindor

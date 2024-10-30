@@ -13,6 +13,7 @@ class Program
 
 
         Console.WriteLine(view.GetMessage1());
+
         controller.GiveName();
 
         //the if statment checks if bax
@@ -28,7 +29,6 @@ class Program
         {
 
             Console.WriteLine(view.GetMessage8());
-
             controller.Filegenerating();
 
         }
