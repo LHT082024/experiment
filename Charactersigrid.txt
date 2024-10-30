@@ -1,0 +1,6 @@
+Name: sigrid
+Bloodstatus: Pureblood
+best at: Charms
+Worst at: Chocolate
+Powerlevel: 10
+Your house: Hufflepuff

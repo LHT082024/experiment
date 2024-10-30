@@ -28,8 +28,8 @@ namespace experiment.Klasser
                     Console.WriteLine("\nYou are Bax THE MOST POWERFUL WIZARD EVER");
                     ControllerModel.Name = "bax";
                     ControllerModel.BloodStatus = "Pureblood";
-                    ControllerModel.Speciality = "Charms";
-                    ControllerModel.Weakness = "Chocolate";
+                    ControllerModel.Speciality = "Curses";
+                    ControllerModel.Weakness = "forgetting to sleep";
                     ControllerModel.PowerLevel = 10;
                     ControllerModel.House = "Gryffindor";
                     Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
@@ -42,7 +42,7 @@ namespace experiment.Klasser
                     ControllerModel.Speciality = "Charms";
                     ControllerModel.Weakness = "Chocolate";
                     ControllerModel.PowerLevel = 10;
-                    ControllerModel.House = "Gryffindor";
+                    ControllerModel.House = "Hufflepuff";
                     Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
                     Console.WriteLine("press any key to contrinue");
                     Console.ReadKey();
