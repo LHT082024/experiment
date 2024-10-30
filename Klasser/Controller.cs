@@ -119,7 +119,6 @@ namespace experiment.Klasser
 
                     switch (speciality)
                     {
-
                         case "charms":
                             Console.WriteLine("cool\n");
                             break;
@@ -194,8 +193,17 @@ namespace experiment.Klasser
 
                     breakFlag = true;
 
+                    while (ControllerModel.Speciality == ControllerModel.Weakness)
+                    {
+                        Console.WriteLine("mate you can't be the best and the worst at something");
+                        weakness = Console.ReadLine().ToLower();
+                        ControllerModel.Weakness = weakness;
+                        if (ControllerModel.Speciality != ControllerModel.Weakness)
+                            break;
+                    }
                     switch (weakness)
                     {
+
                         case "charms":
                             Console.WriteLine("Pretty sure you need that for combat\n");
                             Console.WriteLine("press any key to continue");
@@ -245,11 +253,14 @@ namespace experiment.Klasser
                             break;
 
                     }
+
                 }
+
 
             }
 
         }
+
 
 
         //The powerlevel method. The Powerlevel variable in model is set to int. So I have to use parsing to convert user input to int. 
