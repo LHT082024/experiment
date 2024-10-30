@@ -17,44 +17,73 @@ namespace experiment.Klasser
 
         //the first method GivenName makes the string newName and gives it the value of the userinput then it assaigns the Name varible 
         //and assign it the value of the newName variable
+
         public void GiveName()
         {
             string? newName = Console.ReadLine();
             ControllerModel.Name = newName;
+            switch (newName)
+            {
+                case "Bax":
+                    Console.WriteLine("You are Bax THE MOST POWERFUL WIZARD EVER");
+                    ControllerModel.Name = "Bax";
+                    // ControllerModel.BloodStatus = "Pureblood";
+                    // ControllerModel.Speciality = "Charms";
+                    // ControllerModel.Weakness = "Communication";
+                    // ControllerModel.PowerLevel = 10;
+                    // ControllerModel.House = "Gryffindor";
+                    // Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
+                    // string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
+                    // string filePath = $"Character{ControllerModel.Name}.txt";
+                    // File.WriteAllText(filePath, completedCharacter);
+                    break;
 
+                default:
+                    Console.WriteLine($"Your name is {ControllerModel.Name}");
+                    break;
+            }
         }
 
         //the BloodStatus method does the same thing that GivenName does with the Bloodstatus varible from model. It also adds a while loop to make sure
         //that the user actually inputs one of the correct bloodstatuses #pureblood for the winnnnnnnn
         public void BloodStatus()
         {
-
-            string? bloodStatus = Console.ReadLine().ToLower();
-            ControllerModel.BloodStatus = bloodStatus;
- 
-            while(bloodStatus != "pureblood" && bloodStatus != "halfblood" && bloodStatus != "muggleborn")
+            if (ControllerModel.Name == "Bax")
             {
-                Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn.");
+                ControllerModel.BloodStatus = "Pureblood";
+            }
+            else
+            {
+                string? bloodStatus = Console.ReadLine().ToLower();
+                ControllerModel.BloodStatus = bloodStatus;
 
-                bloodStatus = Console.ReadLine().ToLower();
+                while (bloodStatus != "pureblood" && bloodStatus != "halfblood" && bloodStatus != "muggleborn")
+                {
+                    Console.WriteLine("invalid input please write Pureblood, Halfblood, Muggleborn.");
 
-             if(bloodStatus == "pureblood" | bloodStatus == "halfblood" | bloodStatus == "muggleborn")
-            break;
+                    bloodStatus = Console.ReadLine().ToLower();
+
+                    if (bloodStatus == "pureblood" | bloodStatus == "halfblood" | bloodStatus == "muggleborn")
+                        break;
+                }
+
+                if (bloodStatus == "Pureblood")
+                {
+                    Console.WriteLine("A proper Wizard then not one of those filthy mudbloods\n");
+                }
+                else if (bloodStatus == "Halfblood")
+                {
+                    Console.WriteLine("Like, thats okay.. like you are a wizard, but like, punch your mother or something will you?\n");
+
+                }
+                else if (bloodStatus == "Muggleborn")
+                {
+                    Console.WriteLine("Okay.. okay... like... sure...\n");
+                }
+
             }
 
-            if (bloodStatus == "Pureblood")
-            {
-                Console.WriteLine("A proper Wizard then not one of those filthy mudbloods\n");
-            }
-            else if (bloodStatus == "Halfblood")
-            {
-                Console.WriteLine("Like, thats okay.. like you are a wizard, but like, punch your mother or something will you?\n");
 
-            }
-            else if (bloodStatus == "Muggleborn")
-            {
-                Console.WriteLine("Okay.. okay... like... sure...\n");
-            }
         }
 
 
@@ -63,110 +92,119 @@ namespace experiment.Klasser
         //it uses the default cause making the bool false again and asking the user to try again and type something matching the other cases
         public void Speciality()
         {
-            bool breakFlag = false; 
-
-            while(!breakFlag)
+            if (ControllerModel.Name == "Bax")
             {
-             string? speciality = Console.ReadLine().ToLower();
-            ControllerModel.Speciality = speciality;
-            
-             breakFlag = true;
-
-            switch (speciality)
+                ControllerModel.Speciality = "Charms";
+            }
+            else
             {
-                
-                case "charms":
-                    Console.WriteLine("cool\n");
-                    break;
+                bool breakFlag = false;
 
-                case "curses":
-                    Console.WriteLine("there we go a sorcerer after my own heart curse those Mud- those dark wizards\n");
-                    break;
+                while (!breakFlag)
+                {
+                    string? speciality = Console.ReadLine().ToLower();
+                    ControllerModel.Speciality = speciality;
 
-                case "transfiguration":
-                    Console.WriteLine("Booooring\n");
-                    break;
+                    breakFlag = true;
 
-                case "healing": 
-                    Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
-                    break;
+                    switch (speciality)
+                    {
 
-                case "jinxes":
-                    Console.WriteLine("that works :)\n");
-                    break;
+                        case "charms":
+                            Console.WriteLine("cool\n");
+                            break;
 
-                case "hexes":
-                    Console.WriteLine("yes offence is the best defence\n");
-                    break;
+                        case "curses":
+                            Console.WriteLine("there we go a sorcerer after my own heart curse those Mud- those dark wizards\n");
+                            break;
 
-                case "counter-Spells":
-                    Console.WriteLine("I dont think those are lethal :()");
-                    break;
+                        case "transfiguration":
+                            Console.WriteLine("Booooring\n");
+                            break;
 
-                default:
-                Console.WriteLine(@"Type out an actual subject you muggle the subjects are
+                        case "healing":
+                            Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
+                            break;
+
+                        case "jinxes":
+                            Console.WriteLine("that works :)\n");
+                            break;
+
+                        case "hexes":
+                            Console.WriteLine("yes offence is the best defence\n");
+                            break;
+
+                        case "counter-Spells":
+                            Console.WriteLine("I dont think those are lethal :()");
+                            break;
+
+                        default:
+                            Console.WriteLine(@"Type out an actual subject you muggle the subjects are
                 Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
-                breakFlag = false;
-                break; 
+                            breakFlag = false;
+                            break;
+
+                    }
+
+                }
 
             }
 
-            }
 
-           
+
         }
 
-         //same method as Specailty just the names changed
+        //same method as Specailty just the names changed
         public void Weakness()
         {
-             bool breakFlag = false; 
+            bool breakFlag = false;
 
-            while(!breakFlag)
+            while (!breakFlag)
             {
-             string? weakness = Console.ReadLine().ToLower();
-            ControllerModel.Weakness = weakness;
-           
-             breakFlag = true;
+                string? weakness = Console.ReadLine().ToLower();
+                ControllerModel.Weakness = weakness;
 
-            switch (weakness)
-            {
-                case "charms":
-                    Console.WriteLine("Pretty sure you need that for combat\n");
-                    break;
+                breakFlag = true;
 
-                case "curses":
-                    Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
-                    break;
+                switch (weakness)
+                {
+                    case "charms":
+                        Console.WriteLine("Pretty sure you need that for combat\n");
+                        break;
 
-                case "transfiguration":
-                    Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
-                    break;
+                    case "curses":
+                        Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
+                        break;
 
-                case "healing":
-                    Console.WriteLine("You dont need to heal if everyone around you dies first\n");
-                    break;
+                    case "transfiguration":
+                        Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
+                        break;
 
-                case "jinxes":
-                    Console.WriteLine("pretty sure some of thsoe are lethal\n");
-                    break;
+                    case "healing":
+                        Console.WriteLine("You dont need to heal if everyone around you dies first\n");
+                        break;
 
-                case "hexes":
-                    Console.WriteLine("be better\n");
-                    break;
+                    case "jinxes":
+                        Console.WriteLine("pretty sure some of thsoe are lethal\n");
+                        break;
 
-                case "counter-Spells":
-                    Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
-                    break;
-                
-                default:
-                Console.WriteLine(@"Type out an actual subject you muggle the subjects are
+                    case "hexes":
+                        Console.WriteLine("be better\n");
+                        break;
+
+                    case "counter-Spells":
+                        Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
+                        break;
+
+                    default:
+                        Console.WriteLine(@"Type out an actual subject you muggle the subjects are
                 Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
-                breakFlag = false;
-                break; 
-                    
+                        breakFlag = false;
+                        break;
+
+                }
             }
-         }
-     }
+        }
 
 
         //The powerlevel method. The Powerlevel variable in model is set to int. So I have to use parsing to convert user input to int. 
@@ -176,25 +214,25 @@ namespace experiment.Klasser
         {
             if (int.TryParse(Console.ReadLine(), out int powerLevel))
             {
-                if(powerLevel >= 1 && powerLevel <= 7)
+                if (powerLevel >= 1 && powerLevel <= 7)
                 {
-                    ControllerModel.PowerLevel = powerLevel;      
+                    ControllerModel.PowerLevel = powerLevel;
                 }
-            
+
                 else
                 {
-                    while(powerLevel < 1 || powerLevel > 7)
+                    while (powerLevel < 1 || powerLevel > 7)
                     {
                         Console.WriteLine("Invalid input please type a number between 1 and 7");
-                        if(int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel >= 1 && powerLevel <= 7) 
-                            {
-                               ControllerModel.PowerLevel = powerLevel;
-                              break;
+                        if (int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel >= 1 && powerLevel <= 7)
+                        {
+                            ControllerModel.PowerLevel = powerLevel;
+                            break;
 
-                            }
-                     }
-             
-                 }
+                        }
+                    }
+
+                }
             }
 
         }
@@ -203,13 +241,13 @@ namespace experiment.Klasser
         //Same deal as the two other switchcases in the controller
         public void Houses()
         {
-                bool breakFlag = false; 
+            bool breakFlag = false;
 
-            while(!breakFlag)
+            while (!breakFlag)
             {
                 string? houses = Console.ReadLine().ToLower();
                 ControllerModel.House = houses;
-            
+
                 breakFlag = true;
 
                 switch (houses)
@@ -231,11 +269,11 @@ namespace experiment.Klasser
                         break;
 
                     default:
-                    Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
-                    breakFlag = false;
-                    break;
-            
-                } 
+                        Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
+                        breakFlag = false;
+                        break;
+
+                }
             }
         }
 
@@ -247,13 +285,13 @@ namespace experiment.Klasser
         }
 
 
-      //generates a text file saving the character data of the user called Character(whatever the user called their character)
-      public void Filegenerating() 
-      {
-        string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
-         string filePath = $"Character{ControllerModel.Name}.txt";
-        //  _{DateTime.Now:yyyyMMdd_HHmmss}.txt";
-           File.WriteAllText(filePath, completedCharacter);
-      }
+        //generates a text file saving the character data of the user called Character(whatever the user called their character)
+        public void Filegenerating()
+        {
+            string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
+            string filePath = $"Character{ControllerModel.Name}.txt";
+            //  _{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+            File.WriteAllText(filePath, completedCharacter);
+        }
     }
 }

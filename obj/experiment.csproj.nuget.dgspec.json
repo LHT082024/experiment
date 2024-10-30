@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\falke\\Documents\\coding\\experiment\\experiment.csproj": {}
+    "C:\\Users\\lucie\\Documents\\Intro-HtmlCss\\experiment2\\experiment\\experiment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\falke\\Documents\\coding\\experiment\\experiment.csproj": {
+    "C:\\Users\\lucie\\Documents\\Intro-HtmlCss\\experiment2\\experiment\\experiment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\falke\\Documents\\coding\\experiment\\experiment.csproj",
+        "projectUniqueName": "C:\\Users\\lucie\\Documents\\Intro-HtmlCss\\experiment2\\experiment\\experiment.csproj",
         "projectName": "experiment",
-        "projectPath": "C:\\Users\\falke\\Documents\\coding\\experiment\\experiment.csproj",
-        "packagesPath": "C:\\Users\\falke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\falke\\Documents\\coding\\experiment\\obj\\",
+        "projectPath": "C:\\Users\\lucie\\Documents\\Intro-HtmlCss\\experiment2\\experiment\\experiment.csproj",
+        "packagesPath": "C:\\Users\\lucie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucie\\Documents\\Intro-HtmlCss\\experiment2\\experiment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\falke\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lucie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
