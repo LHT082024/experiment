@@ -30,6 +30,19 @@ class Program
 
 
         }
+        else if (model.Name == "sigrid")
+        {
+            controller.BloodStatus();
+            controller.Speciality();
+            controller.Weakness();
+            controller.PowerLevel();
+            controller.Houses();
+
+            Console.WriteLine(view.GetMessage8());
+
+            controller.Filegenerating();
+
+        }
         else
         {
             Console.WriteLine(view.GetMessage2());

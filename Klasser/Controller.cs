@@ -29,15 +29,18 @@ namespace experiment.Klasser
                     ControllerModel.Name = "bax";
                     Console.WriteLine("press any key to continue");
                     Console.ReadKey();
-                    // ControllerModel.BloodStatus = "Pureblood";
-                    // ControllerModel.Speciality = "Charms";
-                    // ControllerModel.Weakness = "Communication";
-                    // ControllerModel.PowerLevel = 10;
-                    // ControllerModel.House = "Gryffindor";
-                    // Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
-                    // string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
-                    // string filePath = $"Character{ControllerModel.Name}.txt";
-                    // File.WriteAllText(filePath, completedCharacter);
+                    break;
+
+                case "sigrid":
+                    ControllerModel.BloodStatus = "Pureblood";
+                    ControllerModel.Speciality = "Charms";
+                    ControllerModel.Weakness = "Chocolate";
+                    ControllerModel.PowerLevel = 10;
+                    ControllerModel.House = "Gryffindor";
+                    Console.WriteLine($"Your name: {ControllerModel.Name}\n Your bloodstatus: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
+                    string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
+                    string filePath = $"Character{ControllerModel.Name}.txt";
+                    File.WriteAllText(filePath, completedCharacter);
                     break;
 
                 default:
