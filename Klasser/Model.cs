@@ -15,10 +15,6 @@ namespace experiment.Klasser
         public string? House { get; set; }
 
 
-        string[] bloodStatus = { "Pureblood", "Halfblood", "Muggleborn" };
-        string[] speciality = { "Charms", "Curses", "Transfiguration", "Healing", "Jinxes", "Hexes", "Counter-Spells" };
-        int[] powerlevel = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        string[] houses = { "Slytherin", "Gryffindor", "Huffelpuff", "Ravenclaw" };
 
     }
 

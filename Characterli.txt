@@ -1,0 +1,6 @@
+Name: li
+Bloodstatus: halfblood
+best at: curses
+Worst at: healing
+Powerlevel: 7
+Your house: slytherin
