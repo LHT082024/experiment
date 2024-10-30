@@ -49,11 +49,11 @@ namespace experiment.Klasser
                     break;
 
                 case "noldus":
-                    Console.WriteLine("I wont give you my sock!");
+                    Console.WriteLine("\nI wont give you my sock!");
                     ControllerModel.BloodStatus = "elf";
                     ControllerModel.Speciality = "Charms";
                     ControllerModel.Weakness = "Communication";
-                    ControllerModel.PowerLevel = 10;
+                    ControllerModel.PowerLevel = 5;
                     ControllerModel.House = "Hufflepuff";
                     Console.WriteLine($"Your name: {ControllerModel.Name}\n Your species: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
                     Console.WriteLine("press any key to contrinue");
