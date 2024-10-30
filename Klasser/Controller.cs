@@ -71,20 +71,20 @@ namespace experiment.Klasser
                         break;
                 }
 
-                if (bloodStatus == "Pureblood")
+                if (bloodStatus == "pureblood")
                 {
                     Console.WriteLine("A proper Wizard then not one of those filthy mudbloods\n");
                     Console.WriteLine("press any key to continue");
                     Console.ReadKey();
                 }
-                else if (bloodStatus == "Halfblood")
+                else if (bloodStatus == "halfblood")
                 {
                     Console.WriteLine("Like, thats okay.. like you are a wizard, but like, punch your mother or something will you?\n");
                     Console.WriteLine("press any key to continue");
                     Console.ReadKey();
 
                 }
-                else if (bloodStatus == "Muggleborn")
+                else if (bloodStatus == "muggleborn")
                 {
                     Console.WriteLine("Okay.. okay... like... sure...I guess you are a person..\n");
                     Console.WriteLine("press any key to continue");
