@@ -29,8 +29,15 @@ class Program
         {
 
             Console.WriteLine(view.GetMessage8());
+
             controller.Filegenerating();
 
+        }
+        else if (model.Name == "noldus")
+        {
+            Console.WriteLine(view.GetMessage8());
+
+            controller.Filegenerating();
         }
         else
         {

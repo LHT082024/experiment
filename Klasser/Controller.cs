@@ -48,6 +48,18 @@ namespace experiment.Klasser
                     Console.ReadKey();
                     break;
 
+                case "noldus":
+                    Console.WriteLine("I wont give you my sock!");
+                    ControllerModel.BloodStatus = "elf";
+                    ControllerModel.Speciality = "Charms";
+                    ControllerModel.Weakness = "Communication";
+                    ControllerModel.PowerLevel = 10;
+                    ControllerModel.House = "Hufflepuff";
+                    Console.WriteLine($"Your name: {ControllerModel.Name}\n Your species: {ControllerModel.BloodStatus}\n You excel at: {ControllerModel.Speciality}\n You are terrible at {ControllerModel.Weakness}\n Your powerlevel is {ControllerModel.PowerLevel}\n Your house is {ControllerModel.House}");
+                    Console.WriteLine("press any key to contrinue");
+                    Console.ReadKey();
+                    break;
+
                 default:
                     Console.WriteLine($"\nYour name is {ControllerModel.Name}");
                     Console.WriteLine("press any key to continue");
