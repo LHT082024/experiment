@@ -316,49 +316,67 @@ namespace experiment.Klasser
             else
             {
                 bool breakFlag = false;
+                bool isHouseRight = false;
 
-                while (!breakFlag)
+                string? houses = Console.ReadLine().ToLower();
+                ControllerModel.House = houses;
+
+                while (!isHouseRight)
                 {
-                    string? houses = Console.ReadLine().ToLower();
-                    ControllerModel.House = houses;
-
-                    breakFlag = true;
-
-                    switch (houses)
+                    if (ControllerModel.BloodStatus == "muggleborn" && ControllerModel.House == "slytherin")
                     {
-                        case "slytherin":
-                            Console.WriteLine("The best house parseltongue is bae <3");
-                            Console.WriteLine("press any key to continue");
-                            Console.ReadKey();
-                            break;
+                        Console.WriteLine("FILTHY MUDBLO-..... muggleborns can not be a slytherin");
+                        houses = Console.ReadLine().ToLower();
+                        ControllerModel.House = houses;
+                    }
+                    else
+                    {
+                        isHouseRight = true;
 
-                        case "gryffindor":
-                            Console.WriteLine("ewww you basic jock please stay away from me");
-                            Console.WriteLine("press any key to continue");
-                            Console.ReadKey();
-                            break;
+                        while (!breakFlag)
+                        {
 
-                        case "hufflepuff":
-                            Console.WriteLine("thats cute");
-                            Console.WriteLine("press any key to continue");
-                            Console.ReadKey();
-                            break;
+                            breakFlag = true;
 
-                        case "ravenclaw":
-                            Console.WriteLine("ha nerd");
-                            Console.WriteLine("press any key to continue");
-                            Console.ReadKey();
-                            break;
+                            switch (houses)
+                            {
+                                case "slytherin":
+                                    Console.WriteLine("The best house parseltongue is bae <3");
+                                    Console.WriteLine("press any key to continue");
+                                    Console.ReadKey();
+                                    break;
 
-                        default:
-                            Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
-                            Console.WriteLine("press any key to continue");
-                            Console.ReadKey();
-                            breakFlag = false;
-                            break;
+                                case "gryffindor":
+                                    Console.WriteLine("ewww you basic jock please stay away from me");
+                                    Console.WriteLine("press any key to continue");
+                                    Console.ReadKey();
+                                    break;
+
+                                case "hufflepuff":
+                                    Console.WriteLine("thats cute");
+                                    Console.WriteLine("press any key to continue");
+                                    Console.ReadKey();
+                                    break;
+
+                                case "ravenclaw":
+                                    Console.WriteLine("ha nerd");
+                                    Console.WriteLine("press any key to continue");
+                                    Console.ReadKey();
+                                    break;
+
+                                default:
+                                    Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
+                                    Console.WriteLine("press any key to continue");
+                                    Console.ReadKey();
+                                    breakFlag = false;
+                                    break;
+
+                            }
+                        }
 
                     }
                 }
+
 
             }
 
