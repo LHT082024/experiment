@@ -1,6 +1,0 @@
-Name: lucia
-Bloodstatus: muggleborn
-best at: charms
-Worst at: jinxes
-Powerlevel: 7
-Your house: ravenclaw
