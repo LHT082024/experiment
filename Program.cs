@@ -15,7 +15,7 @@ class Program
         Console.WriteLine(view.GetMessage1());
         controller.GiveName();
 
-        if (model.Name == "Bax")
+        if (model.Name == "bax")
         {
             controller.BloodStatus();
             controller.Speciality();

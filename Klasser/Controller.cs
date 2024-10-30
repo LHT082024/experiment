@@ -20,13 +20,13 @@ namespace experiment.Klasser
 
         public void GiveName()
         {
-            string? newName = Console.ReadLine();
+            string? newName = Console.ReadLine().ToLower();
             ControllerModel.Name = newName;
             switch (newName)
             {
-                case "Bax":
+                case "bax":
                     Console.WriteLine("You are Bax THE MOST POWERFUL WIZARD EVER");
-                    ControllerModel.Name = "Bax";
+                    ControllerModel.Name = "bax";
                     // ControllerModel.BloodStatus = "Pureblood";
                     // ControllerModel.Speciality = "Charms";
                     // ControllerModel.Weakness = "Communication";
@@ -48,7 +48,7 @@ namespace experiment.Klasser
         //that the user actually inputs one of the correct bloodstatuses #pureblood for the winnnnnnnn
         public void BloodStatus()
         {
-            if (ControllerModel.Name == "Bax")
+            if (ControllerModel.Name == "bax")
             {
                 ControllerModel.BloodStatus = "Pureblood";
             }
@@ -92,7 +92,7 @@ namespace experiment.Klasser
         //it uses the default cause making the bool false again and asking the user to try again and type something matching the other cases
         public void Speciality()
         {
-            if (ControllerModel.Name == "Bax")
+            if (ControllerModel.Name == "bax")
             {
                 ControllerModel.Speciality = "Charms";
             }
@@ -157,7 +157,7 @@ namespace experiment.Klasser
         //same method as Specailty just the names changed
         public void Weakness()
         {
-            if (ControllerModel.Name == "Bax")
+            if (ControllerModel.Name == "bax")
             {
                 ControllerModel.Weakness = "Going to bed at a reasonble time";
             }
@@ -221,9 +221,11 @@ namespace experiment.Klasser
         //if the user dosent type a valid number we go to an else statment that has a while that tells the user to type a proper number and will keep asking until the user does so
         public void PowerLevel()
         {
-            if (ControllerModel.Name == "Bax")
+            if (ControllerModel.Name == "bax")
             {
                 ControllerModel.PowerLevel = 10;
+                string powerLevel = Convert.ToString(ControllerModel.PowerLevel);
+
             }
             else
             {
@@ -260,7 +262,7 @@ namespace experiment.Klasser
         //Same deal as the two other switchcases in the controller
         public void Houses()
         {
-            if (ControllerModel.Name == "Bax")
+            if (ControllerModel.Name == "bax")
             {
                 ControllerModel.House = "Gryffindor";
             }
@@ -316,7 +318,7 @@ namespace experiment.Klasser
         //generates a text file saving the character data of the user called Character(whatever the user called their character)
         public void Filegenerating()
         {
-            string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlever: {ControllerModel.House}";
+            string completedCharacter = $"Name: {ControllerModel.Name}\nBloodstatus: {ControllerModel.BloodStatus}\nbest at: {ControllerModel.Speciality}\nWorst at: {ControllerModel.Weakness}\nPowerlevel: {ControllerModel.PowerLevel}\nYour house: {ControllerModel.House}";
             string filePath = $"Character{ControllerModel.Name}.txt";
             //  _{DateTime.Now:yyyyMMdd_HHmmss}.txt";
             File.WriteAllText(filePath, completedCharacter);
