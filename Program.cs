@@ -18,12 +18,6 @@ class Program
         //the if statment checks if bax
         if (model.Name == "bax")
         {
-            controller.BloodStatus();
-            controller.Speciality();
-            controller.Weakness();
-            controller.PowerLevel();
-            controller.Houses();
-
             Console.WriteLine(view.GetMessage8());
 
             controller.Filegenerating();
@@ -32,11 +26,6 @@ class Program
         }
         else if (model.Name == "sigrid")
         {
-            controller.BloodStatus();
-            controller.Speciality();
-            controller.Weakness();
-            controller.PowerLevel();
-            controller.Houses();
 
             Console.WriteLine(view.GetMessage8());
 
