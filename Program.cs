@@ -15,6 +15,7 @@ class Program
         Console.WriteLine(view.GetMessage1());
         controller.GiveName();
 
+        //the if statment checks if bax
         if (model.Name == "bax")
         {
             controller.BloodStatus();

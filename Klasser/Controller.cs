@@ -25,8 +25,10 @@ namespace experiment.Klasser
             switch (newName)
             {
                 case "bax":
-                    Console.WriteLine("You are Bax THE MOST POWERFUL WIZARD EVER");
+                    Console.WriteLine("\nYou are Bax THE MOST POWERFUL WIZARD EVER");
                     ControllerModel.Name = "bax";
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadKey();
                     // ControllerModel.BloodStatus = "Pureblood";
                     // ControllerModel.Speciality = "Charms";
                     // ControllerModel.Weakness = "Communication";
@@ -39,7 +41,9 @@ namespace experiment.Klasser
                     break;
 
                 default:
-                    Console.WriteLine($"Your name is {ControllerModel.Name}");
+                    Console.WriteLine($"\nYour name is {ControllerModel.Name}");
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadKey();
                     break;
             }
         }
@@ -70,15 +74,21 @@ namespace experiment.Klasser
                 if (bloodStatus == "Pureblood")
                 {
                     Console.WriteLine("A proper Wizard then not one of those filthy mudbloods\n");
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadKey();
                 }
                 else if (bloodStatus == "Halfblood")
                 {
                     Console.WriteLine("Like, thats okay.. like you are a wizard, but like, punch your mother or something will you?\n");
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadKey();
 
                 }
                 else if (bloodStatus == "Muggleborn")
                 {
-                    Console.WriteLine("Okay.. okay... like... sure...\n");
+                    Console.WriteLine("Okay.. okay... like... sure...I guess you are a person..\n");
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadKey();
                 }
 
             }
@@ -116,26 +126,38 @@ namespace experiment.Klasser
 
                         case "curses":
                             Console.WriteLine("there we go a sorcerer after my own heart curse those Mud- those dark wizards\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "transfiguration":
                             Console.WriteLine("Booooring\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "healing":
                             Console.WriteLine("Could you be more boooooooooooooooring you know you never have to heal if you dont get hit right?\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "jinxes":
                             Console.WriteLine("that works :)\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "hexes":
                             Console.WriteLine("yes offence is the best defence\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "counter-Spells":
                             Console.WriteLine("I dont think those are lethal :()");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         default:
@@ -176,30 +198,44 @@ namespace experiment.Klasser
                     {
                         case "charms":
                             Console.WriteLine("Pretty sure you need that for combat\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "curses":
                             Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "transfiguration":
                             Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "healing":
                             Console.WriteLine("You dont need to heal if everyone around you dies first\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "jinxes":
                             Console.WriteLine("pretty sure some of thsoe are lethal\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "hexes":
                             Console.WriteLine("be better\n");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "counter-Spells":
                             Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         default:
@@ -281,22 +317,32 @@ namespace experiment.Klasser
                     {
                         case "slytherin":
                             Console.WriteLine("The best house parseltongue is bae <3");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "gryffindor":
                             Console.WriteLine("ewww you basic jock please stay away from me");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "hufflepuff":
                             Console.WriteLine("thats cute");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         case "ravenclaw":
                             Console.WriteLine("ha nerd");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             break;
 
                         default:
                             Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
                             breakFlag = false;
                             break;
 

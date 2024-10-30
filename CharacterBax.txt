@@ -2,4 +2,5 @@ Name: bax
 Bloodstatus: Pureblood
 best at: Charms
 Worst at: Going to bed at a reasonble time
-Powerlevel: 10 Your house:  Gryffindor
+Powerlevel: 10
+Your house: Gryffindor
