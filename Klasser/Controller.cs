@@ -157,53 +157,62 @@ namespace experiment.Klasser
         //same method as Specailty just the names changed
         public void Weakness()
         {
-            bool breakFlag = false;
-
-            while (!breakFlag)
+            if (ControllerModel.Name == "Bax")
             {
-                string? weakness = Console.ReadLine().ToLower();
-                ControllerModel.Weakness = weakness;
-
-                breakFlag = true;
-
-                switch (weakness)
-                {
-                    case "charms":
-                        Console.WriteLine("Pretty sure you need that for combat\n");
-                        break;
-
-                    case "curses":
-                        Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
-                        break;
-
-                    case "transfiguration":
-                        Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
-                        break;
-
-                    case "healing":
-                        Console.WriteLine("You dont need to heal if everyone around you dies first\n");
-                        break;
-
-                    case "jinxes":
-                        Console.WriteLine("pretty sure some of thsoe are lethal\n");
-                        break;
-
-                    case "hexes":
-                        Console.WriteLine("be better\n");
-                        break;
-
-                    case "counter-Spells":
-                        Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
-                        break;
-
-                    default:
-                        Console.WriteLine(@"Type out an actual subject you muggle the subjects are
-                Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
-                        breakFlag = false;
-                        break;
-
-                }
+                ControllerModel.Weakness = "Going to bed at a reasonble time";
             }
+            else
+            {
+                bool breakFlag = false;
+
+                while (!breakFlag)
+                {
+                    string? weakness = Console.ReadLine().ToLower();
+                    ControllerModel.Weakness = weakness;
+
+                    breakFlag = true;
+
+                    switch (weakness)
+                    {
+                        case "charms":
+                            Console.WriteLine("Pretty sure you need that for combat\n");
+                            break;
+
+                        case "curses":
+                            Console.WriteLine("ARE YOU INSANE YOU NEED THAT TO FIGHT!\n");
+                            break;
+
+                        case "transfiguration":
+                            Console.WriteLine("I once saw somene transfigure a wizard into a explodiong barrel but you dont need it\n");
+                            break;
+
+                        case "healing":
+                            Console.WriteLine("You dont need to heal if everyone around you dies first\n");
+                            break;
+
+                        case "jinxes":
+                            Console.WriteLine("pretty sure some of thsoe are lethal\n");
+                            break;
+
+                        case "hexes":
+                            Console.WriteLine("be better\n");
+                            break;
+
+                        case "counter-Spells":
+                            Console.WriteLine("the best defence is offence anyway why counter when you can attack)");
+                            break;
+
+                        default:
+                            Console.WriteLine(@"Type out an actual subject you muggle the subjects are
+                Charms, Curses, Transfiguration, Healing, Jinxes, Hexes, Counter-spells");
+                            breakFlag = false;
+                            break;
+
+                    }
+                }
+
+            }
+
         }
 
 
@@ -212,28 +221,38 @@ namespace experiment.Klasser
         //if the user dosent type a valid number we go to an else statment that has a while that tells the user to type a proper number and will keep asking until the user does so
         public void PowerLevel()
         {
-            if (int.TryParse(Console.ReadLine(), out int powerLevel))
+            if (ControllerModel.Name == "Bax")
             {
-                if (powerLevel >= 1 && powerLevel <= 7)
+                ControllerModel.PowerLevel = 10;
+            }
+            else
+            {
+                if (int.TryParse(Console.ReadLine(), out int powerLevel))
                 {
-                    ControllerModel.PowerLevel = powerLevel;
-                }
-
-                else
-                {
-                    while (powerLevel < 1 || powerLevel > 7)
+                    if (powerLevel >= 1 && powerLevel <= 7)
                     {
-                        Console.WriteLine("Invalid input please type a number between 1 and 7");
-                        if (int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel >= 1 && powerLevel <= 7)
-                        {
-                            ControllerModel.PowerLevel = powerLevel;
-                            break;
-
-                        }
+                        ControllerModel.PowerLevel = powerLevel;
                     }
 
+                    else
+                    {
+                        while (powerLevel < 1 || powerLevel > 7)
+                        {
+                            Console.WriteLine("Invalid input please type a number between 1 and 7");
+                            if (int.TryParse(Console.ReadLine(), out powerLevel) && powerLevel >= 1 && powerLevel <= 7)
+                            {
+                                ControllerModel.PowerLevel = powerLevel;
+                                break;
+
+                            }
+                        }
+
+                    }
                 }
+
             }
+
+
 
         }
 
@@ -241,40 +260,49 @@ namespace experiment.Klasser
         //Same deal as the two other switchcases in the controller
         public void Houses()
         {
-            bool breakFlag = false;
-
-            while (!breakFlag)
+            if (ControllerModel.Name == "Bax")
             {
-                string? houses = Console.ReadLine().ToLower();
-                ControllerModel.House = houses;
-
-                breakFlag = true;
-
-                switch (houses)
-                {
-                    case "slytherin":
-                        Console.WriteLine("The best house parseltongue is bae <3");
-                        break;
-
-                    case "gryffindor":
-                        Console.WriteLine("ewww you basic jock please stay away from me");
-                        break;
-
-                    case "hufflepuff":
-                        Console.WriteLine("thats cute");
-                        break;
-
-                    case "ravenclaw":
-                        Console.WriteLine("ha nerd");
-                        break;
-
-                    default:
-                        Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
-                        breakFlag = false;
-                        break;
-
-                }
+                ControllerModel.House = "Gryffindor";
             }
+            else
+            {
+                bool breakFlag = false;
+
+                while (!breakFlag)
+                {
+                    string? houses = Console.ReadLine().ToLower();
+                    ControllerModel.House = houses;
+
+                    breakFlag = true;
+
+                    switch (houses)
+                    {
+                        case "slytherin":
+                            Console.WriteLine("The best house parseltongue is bae <3");
+                            break;
+
+                        case "gryffindor":
+                            Console.WriteLine("ewww you basic jock please stay away from me");
+                            break;
+
+                        case "hufflepuff":
+                            Console.WriteLine("thats cute");
+                            break;
+
+                        case "ravenclaw":
+                            Console.WriteLine("ha nerd");
+                            break;
+
+                        default:
+                            Console.WriteLine("whatever you put is not one of the great houses of hogwarts.\n try again and remember there is Slytherin, Gryffindor, Hufflepuff and Ravenclaw");
+                            breakFlag = false;
+                            break;
+
+                    }
+                }
+
+            }
+
         }
 
         //prints out a final list for the user.
