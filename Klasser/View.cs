@@ -13,8 +13,8 @@ namespace experiment.Klasser
         string Message1 = @"Welcome to Hogwarts here you will either learn magic or die
 the possiblites are endless :) now lets start with your name";
         string Message2 = "\nand what is your bloodstatus? pick one of the following\nPureblood, Halfblood, Muggleborn\n";
-        string Message3 = "\nWhat magic do you excel at pick one of the following\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells\n";
-        string Message4 = "\nNow remember no one is perfcet tell me what are you terrible at\nCharms, Curses, Transfiguration, healing-magic, Jinxes, Hexes, Counter-Spells\n";
+        string Message3 = "\nWhat magic do you excel at pick one of the following\nCharms, Curses, Transfiguration, healing, Jinxes, Hexes, Counter-Spells\n";
+        string Message4 = "\nNow remember no one is perfcet tell me what are you terrible at\nCharms, Curses, Transfiguration, healing, Jinxes, Hexes, Counter-Spells\n";
         string Message5 = "\nHow powerful of a sorcerer are you pick between 1-7\n";
         string Message6 = "\nFinally we are at your last choice, Your house. Which house do you belong to?\n Slytherin, Gryffindor, Hufflepuff, Ravenclaw\n";
         string Message8 = $"\nCongratulations you are now an offical student at Hogwarts, your character sheet can be found in the newly created txt file\n";
