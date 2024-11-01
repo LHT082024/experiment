@@ -1,0 +1,6 @@
+Name: noldus
+Bloodstatus: elf
+best at: Charms
+Worst at: Communication
+Powerlevel: 5
+Your house: Hufflepuff

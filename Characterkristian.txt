@@ -1,0 +1,6 @@
+Name: kristian
+Bloodstatus: halfblood
+best at: charms
+Worst at: hexes
+Powerlevel: 3
+Your house: ravenclaw

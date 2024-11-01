@@ -1,0 +1,6 @@
+Name: cocoqueen
+Bloodstatus: halfblood
+best at: charms
+Worst at: healing
+Powerlevel: 7
+Your house: ravenclaw

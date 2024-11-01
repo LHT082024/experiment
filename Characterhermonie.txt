@@ -1,0 +1,6 @@
+Name: hermonie
+Bloodstatus: muggleborn
+best at: healing
+Worst at: curses
+Powerlevel: 7
+Your house: gryffindor
