@@ -6,4 +6,4 @@ what type of magic you are bad at
 your general powerlevel
 and what house you are in. 
 
-the user will be displayed with a list for each choise and have a text document generated with their new hogwarts student all information stored in it
+the user will be shown a list of options for each choise and have a text document generated with their new hogwarts student information stored in
