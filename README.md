@@ -1,4 +1,4 @@
-using model view controller I want to make a simple "Game" in the console where you can create your own Hogwarts student where you can choose
+using model view controller I wanted to make a simple "Game" in the console where you can create your own Hogwarts student where you can choose
 Name
 Bloodstatus
 what type of magic you excel at
